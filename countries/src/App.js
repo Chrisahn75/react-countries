@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "./components/Button";
+import Card from "./components/Card";
 
 class App extends React.Component {
   constructor() {
@@ -63,23 +64,19 @@ class App extends React.Component {
   render(){
     return (
       <>
-          <h1>Country Selector</h1>
+        <div className="text-center"> 
+          <h1>Country Selector</h1> <br/>
           <Button onClick={this.getCountry}>France</Button>
           <Button onClick={this.getCountry}>Brazil</Button>
           <Button onClick={this.getCountry}>Croatia</Button>
-
-        <div className="d-flex flex-column ">
-            Pays: {this.state.name}<br/>
-            Capital: {this.state.capital}<br/>
-            Drapeau:
-            <img
-              className="flag"
-              src={this.state.flag}
-              alt={`This is the flag of :${this.state.name}`}
-            />
-              Population:{this.state.population}<br/>
-              Region: {this.state.region}<br/>
         </div>
+          <Card
+            name= {this.state.name}
+            capital= {this.state.capital}
+            flag= {this.state.flag}
+            population= {this.state.population}
+            region= {this.state.region}
+          />
       </>
 
     );

@@ -1,4 +1,7 @@
 .flag {
-  height: 150px;
-  width: 150px;
+  height: 300px;
+  width: 500px;
+  display: block;
+  margin: auto;
+  padding: auto;
 }
