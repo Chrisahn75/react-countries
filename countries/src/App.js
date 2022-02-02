@@ -35,10 +35,6 @@ class App extends React.Component {
 		});   
 }
 
-  getCountry(country) {
-    this.setState({ name: country });
-  }
-
   componentDidUpdate(_prevProps, prevState) {
     if (prevState.name !== this.state.name) {
       fetch("https://restcountries.com/v3.1/name/" + this.state.name)
@@ -61,6 +57,9 @@ class App extends React.Component {
     this.setState({ name: country });
   }
   CountryCroatia(country) {
+    this.setState({ name: country });
+  }
+  getCountry(country) {
     this.setState({ name: country });
   }
 
